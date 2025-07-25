@@ -1,7 +1,5 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { JournalEntry } from "@/types/journal";
-import { X } from "lucide-react";
 
 interface EntryModalProps {
   entry: JournalEntry | null;
@@ -20,23 +18,14 @@ export const EntryModal = ({ entry, isOpen, onClose }: EntryModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent 
-        className="sm:max-w-[500px] modal-content"
+      <DialogContent
+        className="sm:max-w-[500px] z-50"
         onKeyDown={handleKeyDown}
       >
         <DialogHeader className="relative">
           <DialogTitle className="text-xl font-semibold pr-8">
             {entry.partLabel}
           </DialogTitle>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="absolute right-0 top-0 h-8 w-8 p-0"
-            onClick={onClose}
-            aria-label="Close"
-          >
-            <X className="h-4 w-4" />
-          </Button>
         </DialogHeader>
         
         <div className="py-4">

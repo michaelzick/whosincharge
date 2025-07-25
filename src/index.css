@@ -146,19 +146,6 @@
     box-shadow: var(--shadow-part-pressed);
   }
 
-  /* Modal fade animations */
-  .modal-overlay {
-    @apply transition-opacity duration-150 ease-out;
-  }
-
-  .modal-content {
-    @apply transition-all duration-150 ease-out;
-    @apply transform scale-95 opacity-0;
-  }
-
-  .modal-content.modal-open {
-    @apply scale-100 opacity-100;
-  }
 
   /* Category specific styles */
   .manager-section {
@@ -174,18 +161,8 @@
   }
 
   /* Category header styles */
-  .manager-header {
-    background: hsl(142 71% 45%);
-    backdrop-filter: blur(8px);
-  }
-
-  .firefighter-header {
-    background: hsl(25 95% 53%);
-    backdrop-filter: blur(8px);
-  }
-
-  .exile-header {
-    background: hsl(266 85% 58%);
+  .section-header {
+    background: hsl(var(--foreground) / 0.9);
     backdrop-filter: blur(8px);
   }
 }
