@@ -12,9 +12,16 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
   const title = getCategoryTitle(category);
   const description = getCategoryDescription(category);
 
+  const headerBg =
+    category === "manager"
+      ? "bg-manager"
+      : category === "firefighter"
+        ? "bg-firefighter"
+        : "bg-exile";
+
   return (
     <div className={`flex-1 min-h-0 ${category}-section rounded-xl p-6`}>
-      <div className={`sticky top-0 z-10 ${category}-header rounded-lg p-4 mb-6 border border-border/20`}>
+      <div className={`sticky top-0 z-10 ${headerBg} rounded-lg p-4 mb-6 border border-border/20`}>
         <h2 className="text-xl font-bold text-white flex items-center gap-2">
           <span className="text-2xl">{emoji}</span>
           {title}
