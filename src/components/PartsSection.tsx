@@ -21,7 +21,7 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
           <span className="text-2xl">{emoji}</span>
           {title}
         </h2>
-        <p className="text-muted-foreground text-sm mt-1 italic">
+        <p className="text-muted-foreground text-m mt-1 capitalize">
           {description}
         </p>
       </div>
