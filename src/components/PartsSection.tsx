@@ -12,12 +12,7 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
   const title = getCategoryTitle(category);
   const description = getCategoryDescription(category);
 
-  const headerBg =
-    category === "manager"
-      ? "bg-manager"
-      : category === "firefighter"
-        ? "bg-firefighter"
-        : "bg-exile";
+  const headerBg = "section-header";
 
   return (
     <div className={`flex-1 min-h-0 ${category}-section rounded-xl p-6`}>
