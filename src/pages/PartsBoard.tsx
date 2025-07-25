@@ -23,7 +23,7 @@ export const PartsBoard = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto p-6">
+      <div className="max-w-8xl mx-auto p-6">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold text-foreground mb-2">
             Choose a Part to Journal With
@@ -39,13 +39,13 @@ export const PartsBoard = () => {
             parts={managers}
             onPartClick={handlePartClick}
           />
-          
+
           <PartsSection
             category="firefighter"
             parts={firefighters}
             onPartClick={handlePartClick}
           />
-          
+
           <PartsSection
             category="exile"
             parts={exiles}
