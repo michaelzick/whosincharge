@@ -175,14 +175,17 @@
 
   /* Category header styles */
   .manager-header {
-    background: hsl(var(--manager));
+    background: hsl(142 71% 45%);
+    backdrop-filter: blur(8px);
   }
 
   .firefighter-header {
-    background: hsl(var(--firefighter));
+    background: hsl(25 95% 53%);
+    backdrop-filter: blur(8px);
   }
 
   .exile-header {
-    background: hsl(var(--exile));
+    background: hsl(266 85% 58%);
+    backdrop-filter: blur(8px);
   }
 }
