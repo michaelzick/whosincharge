@@ -58,7 +58,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent 
-        className="sm:max-w-[425px] modal-content"
+        className="sm:max-w-[425px] modal-content z-50"
         onKeyDown={handleKeyDown}
       >
         <DialogHeader>

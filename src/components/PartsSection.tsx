@@ -14,17 +14,17 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
 
   return (
     <div className={`flex-1 min-h-0 ${category}-section rounded-xl p-6`}>
-      <div className="sticky top-0 z-10 bg-card/80 backdrop-blur-sm rounded-lg p-4 mb-6 border border-border/50">
-        <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
+      <div className={`sticky top-0 z-10 ${category}-header rounded-lg p-4 mb-6 border border-border/20`}>
+        <h2 className="text-xl font-bold text-white flex items-center gap-2">
           <span className="text-2xl">{emoji}</span>
           {title}
         </h2>
-        <p className="text-sm text-muted-foreground mt-1 italic">
+        <p className="text-white/80 text-sm mt-1 italic">
           {description}
         </p>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-items-center">
         {parts.map((part) => (
           <PartButton
             key={part.id}

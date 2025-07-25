@@ -18,28 +18,27 @@ export const PartButton = ({ part, onClick }: PartButtonProps) => {
   };
 
   return (
-    <button
-      className="part-button group relative overflow-hidden rounded-xl aspect-[3/4] bg-card border border-border focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-      onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      role="button"
-      tabIndex={0}
-      aria-label={`Journal with ${part.label}`}
-    >
-      <div className="absolute inset-0">
-        <img
-          src={part.img}
-          alt={part.label}
-          className="w-full h-full object-cover opacity-80 group-hover:opacity-90 transition-opacity duration-150"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-      </div>
+    <div className="flex flex-col items-center space-y-3">
+      <button
+        className="part-button group relative overflow-hidden rounded-xl aspect-[2/3] bg-card border-2 border-border focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 shadow-lg hover:shadow-xl transition-all duration-200 w-full max-w-[200px]"
+        onClick={handleClick}
+        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex={0}
+        aria-label={`Journal with ${part.label}`}
+      >
+        <div className="absolute inset-0">
+          <img
+            src={part.img}
+            alt={part.label}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+          />
+        </div>
+      </button>
       
-      <div className="absolute bottom-0 left-0 right-0 p-3">
-        <h3 className="text-white text-sm font-semibold text-center leading-tight drop-shadow-lg">
-          {part.label}
-        </h3>
-      </div>
-    </button>
+      <h3 className="text-foreground text-sm font-semibold text-center leading-tight px-2">
+        {part.label}
+      </h3>
+    </div>
   );
 };

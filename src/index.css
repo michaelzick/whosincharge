@@ -172,4 +172,17 @@
   .exile-section {
     background: linear-gradient(135deg, hsl(var(--exile-bg)), hsl(var(--exile-bg) / 0.5));
   }
+
+  /* Category header styles */
+  .manager-header {
+    background: hsl(var(--manager));
+  }
+
+  .firefighter-header {
+    background: hsl(var(--firefighter));
+  }
+
+  .exile-header {
+    background: hsl(var(--exile));
+  }
 }
