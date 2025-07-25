@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -51,6 +52,21 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				manager: {
+					DEFAULT: 'hsl(var(--manager))',
+					foreground: 'hsl(var(--manager-foreground))',
+					bg: 'hsl(var(--manager-bg))'
+				},
+				firefighter: {
+					DEFAULT: 'hsl(var(--firefighter))',
+					foreground: 'hsl(var(--firefighter-foreground))',
+					bg: 'hsl(var(--firefighter-bg))'
+				},
+				exile: {
+					DEFAULT: 'hsl(var(--exile))',
+					foreground: 'hsl(var(--exile-foreground))',
+					bg: 'hsl(var(--exile-bg))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
