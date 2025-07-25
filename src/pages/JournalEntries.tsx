@@ -51,7 +51,7 @@ export const JournalEntries = () => {
             <p className="text-muted-foreground mb-6">
               Start journaling with your parts on the Parts Board to see entries here.
             </p>
-            <Button asChild className="bg-primary hover:bg-primary-hover">
+            <Button asChild className="bg-primary">
               <a href="/">Go to Parts Board</a>
             </Button>
           </div>
@@ -107,9 +107,9 @@ export const JournalEntries = () => {
                             </p>
                           </div>
                           <div className="text-xs text-muted-foreground ml-4">
-                            {new Date(entry.timestamp).toLocaleTimeString([], { 
-                              hour: '2-digit', 
-                              minute: '2-digit' 
+                            {new Date(entry.timestamp).toLocaleTimeString([], {
+                              hour: '2-digit',
+                              minute: '2-digit'
                             })}
                           </div>
                         </div>
