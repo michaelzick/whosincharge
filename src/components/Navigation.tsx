@@ -6,14 +6,14 @@ export const Navigation = () => {
   const location = useLocation();
 
   return (
-    <nav className="bg-card border-b border-border px-6 py-4">
+    <nav className="bg-card/80 backdrop-blur-md border-b border-border/20 px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <Heart className="h-6 w-6 text-primary" />
           <h1 className="text-xl font-bold text-foreground">
             Who's In Charge?
           </h1>
-        </div>
+        </Link>
         
         <div className="flex items-center gap-2">
           <Link to="/">
