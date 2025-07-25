@@ -5,7 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Part } from "@/data/parts";
 import { saveEntry, getTodayString } from "@/utils/journal";
 import { useToast } from "@/hooks/use-toast";
-import { cn } from "@/lib/utils";
 
 interface JournalModalProps {
   part: Part | null;
@@ -59,10 +58,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className={cn(
-          "sm:max-w-[425px] modal-content z-50",
-          isOpen && "modal-open"
-        )}
+        className="sm:max-w-[425px] z-50"
         onKeyDown={handleKeyDown}
       >
         <DialogHeader>
