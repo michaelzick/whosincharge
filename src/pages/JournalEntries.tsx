@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { getEntries, groupEntriesByDate, formatDate } from "@/utils/journal";
 import { JournalEntry } from "@/types/journal";
 import { EntryModal } from "@/components/EntryModal";
@@ -7,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { FileText, Calendar } from "lucide-react";
 
 export const JournalEntries = () => {
+  useScrollToTop();
   const [entries, setEntries] = useState<JournalEntry[]>([]);
   const [selectedEntry, setSelectedEntry] = useState<JournalEntry | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,7 +55,7 @@ export const JournalEntries = () => {
               Start journaling with your parts on the Parts Board to see entries here.
             </p>
             <Button asChild className="bg-primary">
-              <a href="/">Go to Parts Board</a>
+              <Link to="/">Go to Parts Board</Link>
             </Button>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import { parts } from "@/data/parts";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 export const PartsInfo = () => {
+  useScrollToTop();
   return (
     <div
       className="min-h-screen bg-background"

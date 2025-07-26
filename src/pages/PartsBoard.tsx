@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { parts, Part } from "@/data/parts";
 import { PartsSection } from "@/components/PartsSection";
 import { JournalModal } from "@/components/JournalModal";
 
 export const PartsBoard = () => {
+  useScrollToTop();
   const [selectedPart, setSelectedPart] = useState<Part | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
