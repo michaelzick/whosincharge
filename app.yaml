@@ -5,7 +5,7 @@ services:
   github:
     repo: your-github-username/your-repo-name
     branch: main
-  run_command: npm start
+  run_command: npm run preview
   environment_slug: node-js
   instance_count: 1
   instance_size_slug: basic-xxs
