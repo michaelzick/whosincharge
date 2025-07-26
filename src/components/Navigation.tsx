@@ -1,14 +1,34 @@
 import { Link, useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
 import { BookOpen, Grid3X3, Heart, Info } from "lucide-react";
 
 export const Navigation = () => {
   const location = useLocation();
+  const navRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      if (navRef.current) {
+        document.documentElement.style.setProperty(
+          "--nav-height",
+          `${navRef.current.offsetHeight}px`
+        );
+      }
+    };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
 
   return (
-    <nav className="bg-card/80 backdrop-blur-md border-b border-border/20 px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav
+      id="main-nav"
+      ref={navRef}
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/20 shadow"
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <Heart className="h-6 w-6 text-primary" />
           <h1 className="text-xl font-bold text-foreground">
@@ -53,7 +73,11 @@ export const Navigation = () => {
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon" aria-label="Menu" className="text-2xl">🔮</Button>
           </SheetTrigger>
-          <SheetContent side="right" className="md:hidden space-y-2 pt-14">
+          <SheetContent
+            side="right"
+            overlayClassName="bg-transparent"
+            className="md:hidden space-y-2 pt-14 bg-background/80 backdrop-blur-md border-t border-b border-l border-white rounded-l-lg shadow"
+          >
             <SheetClose asChild>
               <Link to="/">
                 <Button
