@@ -28,7 +28,7 @@ export const Navigation = () => {
       ref={navRef}
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/20 shadow"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-8xl mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <Heart className="h-6 w-6 text-primary" />
           <h1 className="text-xl font-bold text-foreground">
