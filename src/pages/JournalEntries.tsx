@@ -71,7 +71,7 @@ export const JournalEntries = () => {
             Your Journal Entries
           </h2>
           <p className="text-muted-foreground">
-            Explore your conversations with different parts over time
+            Explore your conversations with different parts over time.
           </p>
         </div>
 

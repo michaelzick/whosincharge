@@ -66,7 +66,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
             {part.label}
           </DialogTitle>
           <DialogDescription>
-            Write what this part wants to express today
+            Write what this part wants to express today.
           </DialogDescription>
         </DialogHeader>
 
