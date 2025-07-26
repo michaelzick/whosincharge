@@ -17,7 +17,7 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
   useEffect(() => {
     const updateOffset = () => {
       const nav = document.getElementById("main-nav");
-      setOffset((nav?.offsetHeight || 0) + 8);
+      setOffset((nav?.offsetHeight || 0) + 5);
     };
     updateOffset();
     window.addEventListener("resize", updateOffset);
@@ -27,7 +27,7 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
   return (
     <section className="flex-1 rounded-xl p-6 space-y-6 border border-border/20 bg-card">
       <div
-        className="lg:sticky z-10 bg-background/80 backdrop-blur-md rounded-lg p-4 border border-border/20 shadow"
+        className="sticky z-10 bg-background/80 backdrop-blur-md rounded-lg p-4 border border-border/20 shadow"
         style={{ top: offset }}
       >
         <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
