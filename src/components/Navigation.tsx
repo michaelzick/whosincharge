@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
 import { BookOpen, Grid3X3, Heart, Info } from "lucide-react";
 
 export const Navigation = () => {
@@ -51,36 +51,42 @@ export const Navigation = () => {
 
         <Sheet>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" aria-label="Menu">🔮</Button>
+            <Button variant="ghost" size="icon" aria-label="Menu" className="text-2xl">🔮</Button>
           </SheetTrigger>
-          <SheetContent side="right" className="md:hidden space-y-2">
-            <Link to="/">
-              <Button
-                variant={location.pathname === "/" ? "default" : "ghost"}
-                className="w-full justify-start"
-              >
-                <Grid3X3 className="h-4 w-4" />
-                Parts Board
-              </Button>
-            </Link>
-            <Link to="/parts-info">
-              <Button
-                variant={location.pathname === "/parts-info" ? "default" : "ghost"}
-                className="w-full justify-start"
-              >
-                <Info className="h-4 w-4" />
-                Parts Info
-              </Button>
-            </Link>
-            <Link to="/journal">
-              <Button
-                variant={location.pathname === "/journal" ? "default" : "ghost"}
-                className="w-full justify-start"
-              >
-                <BookOpen className="h-4 w-4" />
-                Journal Entries
-              </Button>
-            </Link>
+          <SheetContent side="right" className="md:hidden space-y-2 pt-8">
+            <SheetClose asChild>
+              <Link to="/">
+                <Button
+                  variant={location.pathname === "/" ? "default" : "ghost"}
+                  className="w-full justify-start"
+                >
+                  <Grid3X3 className="h-4 w-4" />
+                  Parts Board
+                </Button>
+              </Link>
+            </SheetClose>
+            <SheetClose asChild>
+              <Link to="/parts-info">
+                <Button
+                  variant={location.pathname === "/parts-info" ? "default" : "ghost"}
+                  className="w-full justify-start"
+                >
+                  <Info className="h-4 w-4" />
+                  Parts Info
+                </Button>
+              </Link>
+            </SheetClose>
+            <SheetClose asChild>
+              <Link to="/journal">
+                <Button
+                  variant={location.pathname === "/journal" ? "default" : "ghost"}
+                  className="w-full justify-start"
+                >
+                  <BookOpen className="h-4 w-4" />
+                  Journal Entries
+                </Button>
+              </Link>
+            </SheetClose>
           </SheetContent>
         </Sheet>
       </div>
