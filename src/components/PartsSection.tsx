@@ -17,7 +17,9 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
   useEffect(() => {
     const updateOffset = () => {
       const nav = document.getElementById("main-nav");
-      setOffset((nav?.offsetHeight || 0) + 8);
+      const isMobile = window.innerWidth < 1024;
+      const gap = isMobile ? 78 : 75;
+      setOffset((nav?.offsetHeight || 0) + gap);
     };
     updateOffset();
     window.addEventListener("resize", updateOffset);
