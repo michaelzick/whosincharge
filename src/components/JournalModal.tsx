@@ -37,7 +37,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
     };
 
     saveEntry(entry);
-    
+
     toast({
       title: "Saved to Journal ✅",
       description: `Entry for ${part.label} has been saved.`,
@@ -58,7 +58,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="sm:max-w-[425px] z-50"
+        className="sm:max-w-[425px] z-50 bg-background/70 backdrop-blur-md border border-border/20"
         onKeyDown={handleKeyDown}
       >
         <DialogHeader>
@@ -69,7 +69,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
             Write what this part wants to express today
           </DialogDescription>
         </DialogHeader>
-        
+
         <div className="space-y-4 py-4">
           <Textarea
             placeholder="Write what this part wants to say…"

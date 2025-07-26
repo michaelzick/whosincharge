@@ -19,7 +19,7 @@ export const EntryModal = ({ entry, isOpen, onClose }: EntryModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="sm:max-w-[500px] z-50"
+        className="sm:max-w-[500px] z-50 bg-background/70 backdrop-blur-md border border-border/20"
         onKeyDown={handleKeyDown}
       >
         <DialogHeader className="relative">
@@ -27,14 +27,14 @@ export const EntryModal = ({ entry, isOpen, onClose }: EntryModalProps) => {
             {entry.partLabel}
           </DialogTitle>
         </DialogHeader>
-        
+
         <div className="py-4">
           <div className="bg-muted/50 rounded-lg p-4">
             <p className="text-foreground whitespace-pre-wrap leading-relaxed">
               {entry.text}
             </p>
           </div>
-          
+
           <div className="mt-4 text-xs text-muted-foreground">
             {new Date(entry.timestamp).toLocaleString()}
           </div>
