@@ -22,7 +22,7 @@ export const PartsBoard = () => {
   const exiles = parts.filter(part => part.cat === "exile");
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-20">
       <div className="max-w-8xl mx-auto p-6">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold text-foreground mb-2">

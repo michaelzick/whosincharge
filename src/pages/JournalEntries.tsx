@@ -61,7 +61,7 @@ export const JournalEntries = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-20">
       <div className="max-w-4xl mx-auto p-6">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold text-foreground mb-2">

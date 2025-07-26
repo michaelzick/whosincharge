@@ -2,7 +2,7 @@ import { parts } from "@/data/parts";
 
 export const PartsInfo = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-20">
       <div className="max-w-6xl mx-auto p-6">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-foreground mb-2">
