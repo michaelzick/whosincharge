@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import { JournalEntries } from "./pages/JournalEntries";
 import { PartsInfo } from "./pages/PartsInfo";
 import { Navigation } from "./components/Navigation";
+import { DisclaimerModal } from "./components/DisclaimerModal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,6 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <DisclaimerModal />
       <BrowserRouter>
         <Navigation />
         <Routes>
