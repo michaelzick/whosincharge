@@ -75,7 +75,8 @@ export const Navigation = () => {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="md:hidden space-y-2 pt-14 bg-background/80 backdrop-blur-md border-l border-border/20 shadow"
+            overlayClassName="bg-transparent"
+            className="md:hidden space-y-2 pt-14 bg-background/80 backdrop-blur-md border-t border-b border-l border-white rounded-l-lg shadow"
           >
             <SheetClose asChild>
               <Link to="/">
