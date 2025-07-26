@@ -20,7 +20,7 @@ export const PartButton = ({ part, onClick }: PartButtonProps) => {
   return (
     <div className="flex flex-col items-center space-y-3">
       <button
-        className="part-button group relative overflow-hidden rounded-xl aspect-[2/3] border border-border/30 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 shadow-2xl hover:shadow-primary/20 hover:border-primary/50 hover:scale-110 hover:z-20 transition-all duration-300 w-full h-64"
+        className="part-button group relative overflow-hidden rounded-xl aspect-[2/3] border border-border/30 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 shadow-2xl hover:shadow-primary/20 hover:scale-110 hover:z-20 transition-all duration-300 w-full h-64"
         onClick={handleClick}
         onKeyDown={handleKeyDown}
         role="button"
