@@ -15,7 +15,7 @@ export const Navigation = () => {
             Who's In Charge?
           </h1>
         </Link>
-        
+
         <div className="hidden md:flex items-center gap-2">
           <Link to="/">
             <Button
@@ -53,7 +53,7 @@ export const Navigation = () => {
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon" aria-label="Menu" className="text-2xl">🔮</Button>
           </SheetTrigger>
-          <SheetContent side="right" className="md:hidden space-y-2 pt-8">
+          <SheetContent side="right" className="md:hidden space-y-2 pt-14">
             <SheetClose asChild>
               <Link to="/">
                 <Button
