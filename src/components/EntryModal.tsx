@@ -19,7 +19,7 @@ export const EntryModal = ({ entry, isOpen, onClose }: EntryModalProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent
-        className="sm:max-w-[500px] z-50"
+        className="sm:max-w-[500px] z-50 bg-background/80 backdrop-blur-md border border-border/20"
         onKeyDown={handleKeyDown}
       >
         <DialogHeader className="relative">
