@@ -33,7 +33,7 @@ export const PartsBoard = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6 h-[calc(100vh-200px)]">
+        <div className="flex flex-col lg:flex-row gap-6">
           <PartsSection
             category="manager"
             parts={managers}
