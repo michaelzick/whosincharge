@@ -15,8 +15,8 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
   const headerBg = "section-header";
 
   return (
-    <div className="flex-1 min-h-0 rounded-xl p-6">
-      <div className="sticky top-0 z-10 bg-background/10 backdrop-blur-md rounded-lg p-4 mb-6 border border-border/20 shadow-lg">
+    <section className="flex-1 rounded-xl p-6 space-y-6 border border-border/20 bg-card">
+      <div className="lg:sticky top-0 z-10 bg-background/80 backdrop-blur-md rounded-lg p-4 border border-border/20 shadow">
         <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
           <span className="text-2xl">{emoji}</span>
           {title}
@@ -35,6 +35,6 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
