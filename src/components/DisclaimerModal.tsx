@@ -48,7 +48,7 @@ export const DisclaimerModal = () => {
       >
         <DialogHeader>
           <DialogTitle className="text-xl font-semibold">
-            Privacy Notice
+            Disclaimer
           </DialogTitle>
           <DialogDescription asChild>
             <div className="space-y-4 pt-2 text-left">
