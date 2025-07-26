@@ -55,13 +55,15 @@ export const DisclaimerModal = () => {
               <p>
                 For maximum privacy, none of your journal entries are stored in the
                 cloud. The data stays in your browser's Local Storage, which means
-                that if you switch browsers, use an Incognito or private window, or
+                that your entries will not transfer from one browser to the next.
+                If you use an Incognito or private window and close it, or
                 delete your Local Storage, you WILL LOSE YOUR ENTRIES!
               </p>
               <p>
-                It's recommended that you use this app on a device that only you can
-                access and keep your Local Storage. You can find your entries in
-                Local Storage &gt; ifs-journal-entries.
+                It is recommended that you use this site on a device that only you can
+                access. You can find your entries in Local Storage &gt; ifs-journal-entries
+                in your browser. If you wish to save, edit, or delete your entries, you
+                can do so there. Click "Acknowledge" to hide this message in the future.
               </p>
             </div>
           </DialogDescription>
