@@ -12,8 +12,6 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
   const title = getCategoryTitle(category);
   const description = getCategoryDescription(category);
 
-  const headerBg = "section-header";
-
   return (
     <section className="flex-1 rounded-xl p-6 space-y-6 border border-border/20 bg-card">
       <div className="lg:sticky top-0 z-10 bg-background/80 backdrop-blur-md rounded-lg p-4 border border-border/20 shadow">
