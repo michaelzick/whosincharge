@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Grid3X3, Heart } from "lucide-react";
+import { BookOpen, Grid3X3, Heart, Info } from "lucide-react";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -24,6 +24,16 @@ export const Navigation = () => {
             >
               <Grid3X3 className="h-4 w-4" />
               Parts Board
+            </Button>
+          </Link>
+          <Link to="/parts-info">
+            <Button 
+              variant={location.pathname === "/parts-info" ? "default" : "ghost"}
+              size="sm"
+              className="flex items-center gap-2"
+            >
+              <Info className="h-4 w-4" />
+              Parts Info
             </Button>
           </Link>
           <Link to="/journal">

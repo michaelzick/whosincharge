@@ -138,15 +138,24 @@
 @layer components {
   /* Part button animations */
   .part-button {
-    @apply transition-all duration-150 ease-out;
-    @apply transform hover:scale-[1.02];
-    box-shadow: var(--shadow-part-button);
+    @apply transition-all duration-300 ease-in-out relative;
+  }
+
+  .part-button:hover {
+    @apply shadow-2xl;
+    box-shadow: 0 25px 50px -12px rgba(var(--primary) / 0.3);
+    transform: scale(1.1);
+    z-index: 20;
   }
 
   .part-button:active {
-    @apply translate-y-[2px];
-    box-shadow: var(--shadow-part-pressed);
+    @apply scale-95;
   }
 
-
+  .glass-card {
+    background: rgba(var(--card) / 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(var(--border) / 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  }
 }
