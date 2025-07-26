@@ -84,9 +84,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
           <Button variant="outline" onClick={onClose}>
             Cancel
           </Button>
-          <Button onClick={handleSave} className="bg-primary hover:bg-primary-hover">
-            Save
-          </Button>
+          <Button onClick={handleSave}>Save</Button>
         </div>
       </DialogContent>
     </Dialog>
