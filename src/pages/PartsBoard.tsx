@@ -32,7 +32,7 @@ export const PartsBoard = () => {
             Choose a Part to Journal With
           </h2>
           <p className="text-muted-foreground">
-            Click on any part below to explore what it wants to express today
+            Click on any part below to explore what it wants to express today.
           </p>
         </div>
 
