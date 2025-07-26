@@ -73,7 +73,10 @@ export const Navigation = () => {
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon" aria-label="Menu" className="text-2xl">🔮</Button>
           </SheetTrigger>
-          <SheetContent side="right" className="md:hidden space-y-2 pt-14">
+          <SheetContent
+            side="right"
+            className="md:hidden space-y-2 pt-14 bg-background/80 backdrop-blur-md border-l border-border/20 shadow"
+          >
             <SheetClose asChild>
               <Link to="/">
                 <Button
