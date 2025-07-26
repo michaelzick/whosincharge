@@ -14,7 +14,7 @@ export const PartsInfo = () => {
             Parts Information
           </h1>
           <p className="text-muted-foreground">
-            Learn more about each part in the Internal Family Systems model
+            Learn more about each part in the Internal Family Systems model.
           </p>
         </div>
 

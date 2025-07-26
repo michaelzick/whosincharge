@@ -66,13 +66,13 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
             {part.label}
           </DialogTitle>
           <DialogDescription>
-            Write what this part wants to express today.
+            What does this part want to express?
           </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-4 py-4">
           <Textarea
-            placeholder="Write what this part wants to say…"
+            placeholder="Add your journal entry here."
             value={text}
             onChange={(e) => setText(e.target.value)}
             className="min-h-[120px] resize-none"
