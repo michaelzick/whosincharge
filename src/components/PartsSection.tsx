@@ -1,5 +1,6 @@
 import { Part, getCategoryEmoji, getCategoryTitle, getCategoryDescription } from "@/data/parts";
 import { PartButton } from "./PartButton";
+import { useEffect, useState } from "react";
 
 interface PartsSectionProps {
   category: Part["cat"];
@@ -11,10 +12,24 @@ export const PartsSection = ({ category, parts, onPartClick }: PartsSectionProps
   const emoji = getCategoryEmoji(category);
   const title = getCategoryTitle(category);
   const description = getCategoryDescription(category);
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const updateOffset = () => {
+      const nav = document.getElementById("main-nav");
+      setOffset((nav?.offsetHeight || 0) + 8);
+    };
+    updateOffset();
+    window.addEventListener("resize", updateOffset);
+    return () => window.removeEventListener("resize", updateOffset);
+  }, []);
 
   return (
     <section className="flex-1 rounded-xl p-6 space-y-6 border border-border/20 bg-card">
-      <div className="lg:sticky top-0 z-10 bg-background/80 backdrop-blur-md rounded-lg p-4 border border-border/20 shadow">
+      <div
+        className="lg:sticky z-10 bg-background/80 backdrop-blur-md rounded-lg p-4 border border-border/20 shadow"
+        style={{ top: offset }}
+      >
         <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
           <span className="text-2xl">{emoji}</span>
           {title}
