@@ -3,9 +3,9 @@ services:
 - name: web
   source_dir: /
   github:
-    repo: your-github-username/your-repo-name
+    repo: michaelzick/whos-in-charge
     branch: main
-  run_command: npm run preview
+  run_command: npm start
   environment_slug: node-js
   instance_count: 1
   instance_size_slug: basic-xxs
