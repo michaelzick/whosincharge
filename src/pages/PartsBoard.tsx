@@ -61,12 +61,12 @@ export const PartsBoard = () => {
     >
       <div className="max-w-8xl mx-auto p-6">
         <div className="mb-8 text-center">
+          <h1 className="text-3xl font-bold text-foreground mb-2">
+            Who's In Charge?
+          </h1>
           <h2 className="text-2xl font-bold text-foreground mb-2">
-            Choose a Part to Journal With
+            An Internal Family Systems Journaling Site
           </h2>
-          <p className="text-muted-foreground">
-            Click on any part below to explore what it wants to express today.
-          </p>
           <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
             <button
               onClick={() => setIsIFSOpen(true)}
@@ -125,6 +125,6 @@ export const PartsBoard = () => {
       >
         {instructions}
       </InfoModal>
-    </div>
+    </div >
   );
 };
