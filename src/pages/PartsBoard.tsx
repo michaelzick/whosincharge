@@ -27,7 +27,6 @@ export const PartsBoard = () => {
   const firefighters = parts.filter(part => part.cat === "firefighter");
   const exiles = parts.filter(part => part.cat === "exile");
 
-
   return (
     <div
       className="min-h-screen bg-background"
@@ -39,7 +38,7 @@ export const PartsBoard = () => {
             Who's In Charge?
           </h1>
           <h2 className="text-2xl font-bold text-foreground mb-2">
-            An Internal Family Systems Journaling Site
+            Internal Family Systems Journaling
           </h2>
           <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
             <button
