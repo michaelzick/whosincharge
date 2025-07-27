@@ -56,7 +56,7 @@ export const DisclaimerModal = () => {
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="sm:justify-end">
-          <Button onClick={acknowledge}>Acknowledge</Button>
+          <Button className="mt-2" onClick={acknowledge}>Acknowledge</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

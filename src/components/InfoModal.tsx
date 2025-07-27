@@ -24,7 +24,7 @@ export const InfoModal = ({ title, isOpen, onClose, children }: InfoModalProps) 
         <DialogHeader>
           <DialogTitle className="text-xl font-semibold">{title}</DialogTitle>
         </DialogHeader>
-        <div className="py-4 space-y-4 text-foreground text-sm">{children}</div>
+        <div className="space-y-4 text-foreground text-sm">{children}</div>
         <div className="flex justify-end pt-2">
           <Button onClick={onClose} className="bg-white text-black hover:bg-white/90">
             OK
