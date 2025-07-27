@@ -21,8 +21,6 @@ export const instructions = (
   <>
     <p>
       Select a part below to open a journal modal and write what that part is feeling or wanting to say.
-    </p>
-    <p>
       Your entries are saved in your browser. Visit the Parts Info page to read about each part type and review your writing in Journal Entries.
     </p>
   </>
