@@ -21,8 +21,9 @@ export const instructions = (
   <>
     <p>
       Select a part below to open a journal modal and write what that part is feeling or wanting to say.
-      Your entries are saved in your browser. Visit the Parts Info page to read about each part type and review your writing in Journal Entries.
+      It's best to write freely without worrying about form or content, and write more from your heart than with your head.
     </p>
+    <p>Visit the Parts Info page to read about each part and review your writing in Journal Entries. Your entries are organized by date.</p>
   </>
 );
 
