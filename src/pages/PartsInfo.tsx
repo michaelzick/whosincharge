@@ -41,7 +41,7 @@ export const PartsInfo = () => {
                   <div className="flex items-center gap-3 mb-4">
                     <span className="text-2xl">
                       {part.cat === "manager" && "🛡️"}
-                      {part.cat === "firefighter" && "🚨"}
+                      {part.cat === "firefighter" && "🔥"}
                       {part.cat === "exile" && "💔"}
                     </span>
                     <h2 className="text-2xl font-bold text-foreground">
