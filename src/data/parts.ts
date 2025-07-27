@@ -87,7 +87,7 @@ export const parts: Part[] = [
   // Firefighters
   {
     cat: "firefighter",
-    id: "rage-blaster",
+    id: "rage_blaster",
     label: "Rage Blaster",
     img: rageBlaster,
     description: "The Rage Blaster is the part that explodes with anger when triggered, often disproportionately to the current situation. This part developed to protect vulnerable exile parts from further harm. It believes that if it's fierce and intimidating enough, it can stop threats and defend against hurt.\n\nThis part often carries unexpressed anger from past wounds and injustices. While its protective intent is valuable, its methods can damage relationships and create more problems. The Rage Blaster fears that without its fierce protection, you'll be hurt, taken advantage of, or disrespected.\n\nWhen this part is witnessed and understood, it can become a powerful force for healthy boundaries and standing up for yourself and others. Its protective energy can be channeled into appropriate assertiveness and advocacy rather than explosive reactivity."
@@ -153,14 +153,14 @@ export const parts: Part[] = [
   {
     cat: "exile",
     id: "lonely_child",
-    label: "The Lonely Child",
+    label: "Lonely Child",
     img: lonelyChild,
     description: "The Lonely Child is the part that carries feelings of isolation, abandonment, and longing for connection. This part might have experienced emotional or physical abandonment early in life and still carries that wound. It desperately wants to be seen, understood, and included.\n\nThis part often feels invisible or forgotten and might act out in ways that seek attention or connection. It carries deep sadness about being alone and fears that it's fundamentally unlovable or destined to be isolated. The Lonely Child needs reassurance that it's worthy of love and belonging.\n\nWhen this part is witnessed and comforted, it brings gifts of empathy, sensitivity to others who are isolated, and a deep appreciation for authentic connection. It can guide you toward meaningful relationships and help you recognize when others are struggling with loneliness."
   },
   {
     cat: "exile",
     id: "grief_stricken",
-    label: "The Grief-Stricken",
+    label: "Grief-Stricken",
     img: griefPart,
     description: "The Grief-Stricken Part holds all the losses, disappointments, and heartbreaks that haven't been fully processed or honored. This part might carry sadness about lost relationships, missed opportunities, childhood that was lost, or dreams that died. It needs to mourn what was lost.\n\nThis part can feel overwhelmingly sad and might be avoided by other parts that fear being consumed by grief. The Grief Part fears that if it starts crying, it might never stop, or that its sadness will drive others away. It needs permission to feel and express its pain.\n\nWhen this part is allowed to grieve fully and is companioned through its losses, it can become a source of deep compassion, wisdom, and appreciation for life's preciousness. It helps you love more fully by understanding the reality of loss and impermanence."
   },
@@ -174,7 +174,7 @@ export const parts: Part[] = [
   {
     cat: "exile",
     id: "hurt_infant",
-    label: "The Hurt Infant",
+    label: "Hurt Infant",
     img: hurtInfant,
     description: "The Hurt Infant is the most vulnerable part that carries very early wounds and needs. This part might have experienced neglect, trauma, or inadequate care in the earliest years of life. It holds primal fears about survival, safety, and having its basic needs met.\n\nThis part can feel incredibly raw and vulnerable, often triggering protective parts to work overtime to keep it safe. The Hurt Infant needs gentle care, consistent reassurance, and patient healing. It might not even have words for its pain—just feelings and body sensations.\n\nWhen held with tenderness and given the care it needed but didn't receive, this part can become a source of wonder, innocence, and pure love. It carries the capacity for joy, trust, and the ability to receive care without defensiveness."
   }
