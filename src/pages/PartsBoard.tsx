@@ -4,6 +4,7 @@ import { parts, Part } from "@/data/parts";
 import { PartsSection } from "@/components/PartsSection";
 import { JournalModal } from "@/components/JournalModal";
 import InfoModal from "@/components/InfoModal";
+import { ifsDescription, instructions, disclaimerText } from "@/data/content";
 
 export const PartsBoard = () => {
   useScrollToTop();
@@ -26,33 +27,6 @@ export const PartsBoard = () => {
   const firefighters = parts.filter(part => part.cat === "firefighter");
   const exiles = parts.filter(part => part.cat === "exile");
 
-  const ifsDescription = (
-    <>
-      <p>
-        Internal Family Systems (IFS) views the mind as a collection of
-        sub-personalities, or "parts," each with its own perspective and
-        feelings. These parts often develop roles to protect us from pain, and
-        they can sometimes clash with one another.
-      </p>
-      <p>
-        The goal of IFS is to help you connect with your calm, curious Self so
-        that all parts can be heard and work together in harmony.
-      </p>
-    </>
-  );
-
-  const instructions = (
-    <>
-      <p>
-        Select a part below to open a journal modal and write what that part is
-        feeling or wanting to say.
-      </p>
-      <p>
-        Your entries are saved in your browser. Visit the Parts Info page to
-        read about each part type and review your writing in Journal Entries.
-      </p>
-    </>
-  );
 
   return (
     <div
@@ -124,6 +98,10 @@ export const PartsBoard = () => {
         onClose={() => setIsInstructionsOpen(false)}
       >
         {instructions}
+        <div className="pt-4 space-y-2 text-left">
+          <h3 className="text-lg font-semibold">Disclaimer</h3>
+          <div className="space-y-4 pt-2">{disclaimerText}</div>
+        </div>
       </InfoModal>
     </div >
   );
