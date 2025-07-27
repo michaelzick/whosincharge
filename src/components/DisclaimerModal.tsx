@@ -8,7 +8,7 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { disclaimerText } from "@/data/content";
+import { disclaimerModalText } from "@/data/content";
 
 const ACK_KEY = "ifs-journal-disclaimer-ack";
 
@@ -52,7 +52,7 @@ export const DisclaimerModal = () => {
             Disclaimer
           </DialogTitle>
           <DialogDescription asChild>
-            <div className="space-y-4 pt-2 text-left">{disclaimerText}</div>
+            <div className="space-y-4 pt-2 text-left">{disclaimerModalText}</div>
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="sm:justify-end">
