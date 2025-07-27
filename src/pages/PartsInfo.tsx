@@ -1,8 +1,18 @@
 import { parts } from "@/data/parts";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const PartsInfo = () => {
   useScrollToTop();
+  const [query, setQuery] = useState("");
+  const filteredParts = parts.filter((part) => {
+    const q = query.trim().toLowerCase();
+    if (!q) return true;
+    const text = `${part.label} ${part.description}`.toLowerCase();
+    return text.includes(q);
+  });
   return (
     <div
       className="min-h-screen bg-background"
@@ -16,10 +26,25 @@ export const PartsInfo = () => {
           <p className="text-muted-foreground">
             Learn more about each part in the Internal Family Systems model.
           </p>
+          <div className="mt-6 flex justify-center gap-2">
+            <Input
+              placeholder="Search for words or phrases..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="max-w-md"
+            />
+            <Button
+              variant="outline"
+              onClick={() => setQuery("")}
+              type="button"
+            >
+              Clear <span className="ml-1">🔱</span>
+            </Button>
+          </div>
         </div>
 
         <div className="space-y-12">
-          {parts.map((part) => (
+          {filteredParts.map((part) => (
             <div
               key={part.id}
               className="glass-card rounded-xl p-6 backdrop-blur-md border border-border/20"
