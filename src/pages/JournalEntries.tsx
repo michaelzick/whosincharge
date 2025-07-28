@@ -109,7 +109,7 @@ export const JournalEntries = () => {
                               {entry.partLabel}
                             </h4>
                             <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
-                              {entry.text}
+                              {entry.feeling || entry.text}
                             </p>
                           </div>
                           <div className="text-xs text-muted-foreground ml-4">

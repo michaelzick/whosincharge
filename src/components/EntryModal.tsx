@@ -28,14 +28,39 @@ export const EntryModal = ({ entry, isOpen, onClose }: EntryModalProps) => {
           </DialogTitle>
         </DialogHeader>
 
-        <div className="py-4">
-          <div className="bg-muted/50 rounded-lg p-4">
-            <p className="text-foreground whitespace-pre-wrap leading-relaxed">
-              {entry.text}
-            </p>
+        <div className="py-4 space-y-4">
+          <div>
+            <h4 className="text-sm font-medium mb-1">
+              What's this part feeling right now? What does it want to say?
+            </h4>
+            <div className="bg-muted/50 rounded-lg p-4 min-h-[1.5rem]">
+              <p className="text-foreground whitespace-pre-wrap leading-relaxed">
+                {entry.feeling || entry.text || ""}
+              </p>
+            </div>
           </div>
 
-          <div className="mt-4 text-xs text-muted-foreground">
+          <div>
+            <h4 className="text-sm font-medium mb-1">What does this part need?</h4>
+            <div className="bg-muted/50 rounded-lg p-4 min-h-[1.5rem]">
+              <p className="text-foreground whitespace-pre-wrap leading-relaxed">
+                {entry.need || ""}
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-medium mb-1">
+              How can you help this part? What does it need from you (your Higher Self)?
+            </h4>
+            <div className="bg-muted/50 rounded-lg p-4 min-h-[1.5rem]">
+              <p className="text-foreground whitespace-pre-wrap leading-relaxed">
+                {entry.help || ""}
+              </p>
+            </div>
+          </div>
+
+          <div className="text-xs text-muted-foreground">
             {new Date(entry.timestamp).toLocaleString()}
           </div>
         </div>
