@@ -73,15 +73,12 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
           <DialogTitle className="text-xl font-semibold">
             {part.label}
           </DialogTitle>
-          <DialogDescription>
-            What does this part want to express?
-          </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-4 py-4">
+        <div className="space-y-8 py-4">
           <div className="space-y-2">
-            <Label htmlFor="feeling" className="text-sm">
-              What's this part feeling right now?
+            <Label htmlFor="feeling" className="text-sm text-muted-foreground">
+              What is this part feeling right now?
               <br />
               What does it want to say?
             </Label>
@@ -96,7 +93,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="need" className="text-sm">
+            <Label htmlFor="need" className="text-sm text-muted-foreground">
               What does this part need?
             </Label>
             <Textarea
@@ -109,7 +106,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="help" className="text-sm">
+            <Label htmlFor="help" className="text-sm text-muted-foreground">
               How can you help this part?
               <br />
               What does it need from you (your Higher Self)?

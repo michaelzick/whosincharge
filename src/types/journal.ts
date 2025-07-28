@@ -3,7 +3,7 @@ export interface JournalEntry {
   part: string; // part ID
   partLabel: string; // part label for display
   text: string; // legacy field used for preview/snippets
-  feeling?: string; // what's this part feeling right now
+  feeling?: string; // what is this part feeling right now
   need?: string; // what does this part need
   help?: string; // how can the higher self help
   timestamp: number; // for sorting entries within a day
