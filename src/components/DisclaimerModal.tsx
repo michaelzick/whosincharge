@@ -52,7 +52,7 @@ export const DisclaimerModal = () => {
             Disclaimer
           </DialogTitle>
           <DialogDescription asChild>
-            <div className="space-y-4 pt-2 text-left">{disclaimerModalText}</div>
+            <div className="space-y-4 pt-2 text-left text-white">{disclaimerModalText}</div>
           </DialogDescription>
         </DialogHeader>
         <DialogFooter className="sm:justify-end">
