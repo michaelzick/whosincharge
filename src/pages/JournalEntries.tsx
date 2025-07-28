@@ -48,6 +48,14 @@ export const JournalEntries = () => {
       return b.timestamp - a.timestamp;
     });
     setEntries(sortedEntries);
+    
+    // Update selectedEntry with fresh data if it exists
+    if (selectedEntry) {
+      const updatedEntry = sortedEntries.find(entry => entry.timestamp === selectedEntry.timestamp);
+      if (updatedEntry) {
+        setSelectedEntry(updatedEntry);
+      }
+    }
   };
 
   const handleEntryDelete = () => {
