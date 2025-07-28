@@ -37,7 +37,6 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
       date: getTodayString(),
       part: part.id,
       partLabel: part.label,
-      text: feeling.trim(),
       feeling: feeling.trim(),
       need: need.trim(),
       help: help.trim(),
