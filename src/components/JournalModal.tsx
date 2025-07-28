@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { Part } from "@/data/parts";
 import { saveEntry, getTodayString } from "@/utils/journal";
 import { useToast } from "@/hooks/use-toast";
@@ -13,17 +14,21 @@ interface JournalModalProps {
 }
 
 export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
-  const [text, setText] = useState("");
+  const [feeling, setFeeling] = useState("");
+  const [need, setNeed] = useState("");
+  const [help, setHelp] = useState("");
   const { toast } = useToast();
 
   useEffect(() => {
     if (!isOpen) {
-      setText("");
+      setFeeling("");
+      setNeed("");
+      setHelp("");
     }
   }, [isOpen]);
 
   const handleSave = () => {
-    if (!part || !text.trim()) {
+    if (!part || !feeling.trim() && !need.trim() && !help.trim()) {
       onClose();
       return;
     }
@@ -32,7 +37,10 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
       date: getTodayString(),
       part: part.id,
       partLabel: part.label,
-      text: text.trim(),
+      text: feeling.trim(),
+      feeling: feeling.trim(),
+      need: need.trim(),
+      help: help.trim(),
       timestamp: Date.now()
     };
 
@@ -65,19 +73,52 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
           <DialogTitle className="text-xl font-semibold">
             {part.label}
           </DialogTitle>
-          <DialogDescription>
-            What does this part want to express?
-          </DialogDescription>
         </DialogHeader>
 
-        <div className="space-y-4 py-4">
-          <Textarea
-            placeholder="Add your journal entry here."
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            className="min-h-[120px] resize-none"
-            autoFocus
-          />
+        <div className="space-y-8 py-4">
+          <div className="space-y-2">
+            <Label htmlFor="feeling" className="text-sm text-muted-foreground">
+              What is this part feeling right now?
+              <br />
+              What does it want to say?
+            </Label>
+            <Textarea
+              id="feeling"
+              placeholder="Type here"
+              value={feeling}
+              onChange={(e) => setFeeling(e.target.value)}
+              className="min-h-[100px] resize-none"
+              autoFocus
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="need" className="text-sm text-muted-foreground">
+              What does this part need?
+            </Label>
+            <Textarea
+              id="need"
+              placeholder="Type here"
+              value={need}
+              onChange={(e) => setNeed(e.target.value)}
+              className="min-h-[100px] resize-none"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="help" className="text-sm text-muted-foreground">
+              How can you help this part?
+              <br />
+              What does it need from you (your Higher Self)?
+            </Label>
+            <Textarea
+              id="help"
+              placeholder="Type here"
+              value={help}
+              onChange={(e) => setHelp(e.target.value)}
+              className="min-h-[100px] resize-none"
+            />
+          </div>
         </div>
 
         <div className="flex justify-end space-x-2">
