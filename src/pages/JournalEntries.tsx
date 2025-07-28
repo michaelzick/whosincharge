@@ -39,6 +39,28 @@ export const JournalEntries = () => {
     setSelectedEntry(null);
   };
 
+  const handleEntryUpdate = () => {
+    // Reload entries after update
+    const allEntries = getEntries();
+    const sortedEntries = allEntries.sort((a, b) => {
+      const dateCompare = b.date.localeCompare(a.date);
+      if (dateCompare !== 0) return dateCompare;
+      return b.timestamp - a.timestamp;
+    });
+    setEntries(sortedEntries);
+  };
+
+  const handleEntryDelete = () => {
+    // Reload entries after deletion
+    const allEntries = getEntries();
+    const sortedEntries = allEntries.sort((a, b) => {
+      const dateCompare = b.date.localeCompare(a.date);
+      if (dateCompare !== 0) return dateCompare;
+      return b.timestamp - a.timestamp;
+    });
+    setEntries(sortedEntries);
+  };
+
   const groupedEntries = groupEntriesByDate(entries);
   const sortedDates = Object.keys(groupedEntries).sort((a, b) => b.localeCompare(a));
 
@@ -133,6 +155,8 @@ export const JournalEntries = () => {
         entry={selectedEntry}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+        onEntryUpdate={handleEntryUpdate}
+        onEntryDelete={handleEntryDelete}
       />
     </div>
   );

@@ -36,6 +36,21 @@ export const formatDate = (dateString: string): string => {
   });
 };
 
+export const updateEntry = (updatedEntry: JournalEntry): void => {
+  const entries = getEntries();
+  const index = entries.findIndex(entry => entry.timestamp === updatedEntry.timestamp);
+  if (index !== -1) {
+    entries[index] = updatedEntry;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+  }
+};
+
+export const deleteEntry = (timestamp: number): void => {
+  const entries = getEntries();
+  const filteredEntries = entries.filter(entry => entry.timestamp !== timestamp);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(filteredEntries));
+};
+
 export const getTodayString = (): string => {
   return new Date().toISOString().split('T')[0];
 };
