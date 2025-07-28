@@ -81,7 +81,9 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
         <div className="space-y-4 py-4">
           <div className="space-y-2">
             <Label htmlFor="feeling" className="text-sm">
-              What's this part feeling right now? What does it want to say?
+              What's this part feeling right now?
+              <br />
+              What does it want to say?
             </Label>
             <Textarea
               id="feeling"
@@ -108,7 +110,9 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
 
           <div className="space-y-2">
             <Label htmlFor="help" className="text-sm">
-              How can you help this part? What does it need from you (your Higher Self)?
+              How can you help this part?
+              <br />
+              What does it need from you (your Higher Self)?
             </Label>
             <Textarea
               id="help"
