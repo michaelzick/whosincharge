@@ -46,7 +46,7 @@ export const JournalModal = ({ part, isOpen, onClose }: JournalModalProps) => {
     saveEntry(entry);
 
     toast({
-      title: "Saved to Journal ✍🏻",
+      title: "Saved to Journal  ✍🏻",
       description: `Entry for ${part.label} has been saved.`,
       duration: 3000,
     });
