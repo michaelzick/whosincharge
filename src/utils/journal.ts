@@ -79,7 +79,7 @@ export const entriesToCSV = (entries: JournalEntry[]): string => {
       e.date,
       e.part,
       e.partLabel,
-      e.feeling || '',
+      e.feeling ?? e.text ?? '',
       e.need || '',
       e.help || '',
       e.timestamp,
