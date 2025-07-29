@@ -1,9 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { getEntries, groupEntriesByDate, formatDate } from "@/utils/journal";
+import {
+  getEntries,
+  groupEntriesByDate,
+  formatDate,
+  exportEntriesAsCSV,
+  exportEntriesAsJSON,
+} from "@/utils/journal";
 import { JournalEntry } from "@/types/journal";
 import { EntryModal } from "@/components/EntryModal";
+import { ExportModal } from "@/components/ExportModal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { FileText, Calendar } from "lucide-react";
@@ -13,6 +20,7 @@ export const JournalEntries = () => {
   const [entries, setEntries] = useState<JournalEntry[]>([]);
   const [selectedEntry, setSelectedEntry] = useState<JournalEntry | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isExportOpen, setIsExportOpen] = useState(false);
 
   useEffect(() => {
     const loadEntries = () => {
@@ -69,6 +77,16 @@ export const JournalEntries = () => {
     setEntries(sortedEntries);
   };
 
+  const handleExportCSV = () => {
+    exportEntriesAsCSV();
+    setIsExportOpen(false);
+  };
+
+  const handleExportJSON = () => {
+    exportEntriesAsJSON();
+    setIsExportOpen(false);
+  };
+
   const groupedEntries = groupEntriesByDate(entries);
   const sortedDates = Object.keys(groupedEntries).sort((a, b) => b.localeCompare(a));
 
@@ -106,6 +124,13 @@ export const JournalEntries = () => {
           <p className="text-muted-foreground">
             Explore your conversations with different parts over time.
           </p>
+          <Button
+            variant="outline"
+            className="mt-4"
+            onClick={() => setIsExportOpen(true)}
+          >
+            Export Your Entries 🪙
+          </Button>
         </div>
 
         <div className="space-y-4">
@@ -165,6 +190,12 @@ export const JournalEntries = () => {
         onClose={handleCloseModal}
         onEntryUpdate={handleEntryUpdate}
         onEntryDelete={handleEntryDelete}
+      />
+      <ExportModal
+        isOpen={isExportOpen}
+        onClose={() => setIsExportOpen(false)}
+        onExportCSV={handleExportCSV}
+        onExportJSON={handleExportJSON}
       />
     </div>
   );
